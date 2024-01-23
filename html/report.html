@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Report</title>
+<link rel="stylesheet" href="../css/report.css"> </head>
+
+<body>
+    <header>
+        <div class="container">
+
+            <div class="header">
+                <div class="logo">
+                    <h1>Hospital Management System</h1>
+                </div>
+                <div class="nav">
+                    <a href="Home.html">Home</a>
+                    <a href="#">Prescriptions</a>
+                    <a class="active" href="#">Records</a>
+                    <a href="#">Inventory</a>
+                </div>
+            </div>
+
+        <h1>Patient Report</h1>
+        <p>Generated on: <span id="date"></span></p>
+    </header>
+
+    <section id="patient-info">
+        <h2>Patient Information</h2>
+        <table>
+                <tr>
+                    <th> Patient Name: </th>
+                    <td> Niel Belen</td>
+                    </tr>
+                <tr>
+                    <th> age: </th>
+                    <td> 23 <td>
+                </tr>
+                    <th> Patient Name: </th>
+                    <td> Niel Belen</td>
+                </tr>
+                <tr>
+                    <th> Date of Birth : </th>
+                    <td> May 16, 2023</td>
+                </tr>
+                <tr>
+                    <th> Gender: </th>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <th> Nationality: </th>
+                    <td>Filipino</td>
+                </tr>
+                <tr>
+                    <th> Religion : </th>
+                    <td>Catholic</td>
+                </tr>
+                <tr>
+                    <th> Address : </th>
+                    <td>Brgy. Platero Binan City Laguna</td>
+                </tr>
+                <tr>
+                    <th> Contact Number : </th>
+                    <td>099999999</td>
+                </tr>
+                <tr>
+                    <th> Email Address : </th>
+                    <td>niel@gmail.com</td>
+                </tr>
+    </table>
+</section>
+
+    <section id="medical-history">
+        <h2>Medical History</h2>
+        </section>
+
+    <section id="diagnosis-treatment">
+        <h2>Diagnosis and Treatment</h2>
+        </section>
+
+    <script>
+        // JavaScript to dynamically add the date and time
+        const dateElement = document.getElementById("date");
+        dateElement.textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://as2.ftcdn.net/v2/jpg/01/15/92/83/1000_F_115928369_E2yDqT2WqvoKl6XmsmL6Yitlb6j9Lh1Q.jpg");
+    background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: georgia;
+	font-size: 20px;
+    text-align: center;
+}
+
+.prescription-container {
+    border: 2px solid #A1DBF1;
+    padding: 20px;
+    margin: 40px auto; /* Center the container */
+    width: 500px;
+    background-color: #E4F4F3;
+    border-radius: 10px;
+}
+
+.prescription-header {
+    color: #00B6BC;
+    font-size: 40px;
+	font-family: copperplate;
+    margin-bottom: 20px;
+	
+}
+
+.patient-info,
+.medicine-info {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 10px;
+    border: 1px solid tiffanyblue;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00B6BC;
+    border-radius: 5px;
+    margin-bottom: 10px;
+	font-family: georgia;
+
+}
+
+.generate-button {
+    background-color: #00B6BC;
+    color: white;
+    font-weight: bold;
+	font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  </style>
+</head>
+<body>

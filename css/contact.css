@@ -1,0 +1,62 @@
+body {
+	 background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("https://img.etimg.com/thumb/msid-98975531,width-300,height-225,imgsize-101780,resizemode-75/hospital-new.jpg");
+    background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-color: #E4F4F3;
+    font-family: georgia;
+	font-size: 20px;
+    color: #333;
+}
+
+header {
+    
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+	font-size: 22px;
+}
+
+main section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-hospital {
+    background-color: #71D5E4;
+    text-align: center;
+}
+
+.contact-hospital button {
+    background-color: #00B6BC;
+	font-size: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	
+}
+
+footer {
+    background-color: #A1DBF1;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-us address p {
+    margin-bottom: 5px;
+}
+
+img {
+    width 
