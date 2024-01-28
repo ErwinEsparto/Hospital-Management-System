@@ -15,11 +15,11 @@
                 <a href="#"> PUP Biñan Doctors </a>
             </div>
             <div class="nav">
-                <a href="http://localhost/Hospital-Management-System/html/Home.php">Home</a>
-                <a class="active" href="http://localhost/Hospital-Management-System/html/appointment.php">Appointments</a>
-                <a href="http://localhost/Hospital-Management-System/html/PatientRecords.php">Records</a>
-                <a href="http://localhost/Hospital-Management-System/html/Inventory.php">Inventory</a>
-                <a href="http://localhost/Hospital-Management-System/html/ContactingHospital.php">About Us</a>
+                <a href="Home.php">Home</a>
+                <a class="active" href="appointment.php">Appointments</a>
+                <a href="PatientRecords.php">Records</a>
+                <a href="Inventory.php">Inventory</a>
+                <a href="ContactingHospital.php">About Us</a>
             </div>
             <div class="account">
                 <a class="active" href="#">Login</a>
@@ -33,7 +33,7 @@
     <div class="blurred-background"></div> 
     <div class="appointment-container">
         <h1>Book an Appointment</h1>
-        <form action="http://localhost/Hospital-Management-System/html/Home.php" method="post">
+        <form action="Home.php" method="post">
             <div>
                 <label for="doctor">Choose a Doctor:</label>
                 <select id="doctor" name="doctor">

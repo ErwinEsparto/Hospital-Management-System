@@ -17,13 +17,11 @@
             </div>
         
             <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Prescriptions</a>
-                <a href="#">Appointments</a>
-                <a href="#">Records</a>
-                <a class="active" href="#">Report</a>
-                <a href="#">Inventory</a>
-                <a href="#">Contact</a>
+                <a href="Home.php">Home</a>
+                <a href="appointment.php">Appointments</a>
+                <a href="PatientRecords.php">Records</a>
+                <a href="Inventory.php">Inventory</a>
+                <a href="ContactingHospital.php">About Us</a>
             </div>
 
             <div class="account">

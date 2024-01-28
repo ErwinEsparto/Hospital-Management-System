@@ -86,12 +86,11 @@
                 <a href="#"> PUP Biñan Doctors </a>
             </div>
             <div class="nav">
-                <a href="Home.html">Home</a>
-                <a href="#">Prescriptions</a>
-                <a href="#">Appointments</a>
-                <a class="active" href="#">Records</a>
-                <a href="#">Inventory</a>
-                <a href="#">Contact</a>
+                <a href="Home.php">Home</a>
+                <a href="appointment.php">Appointments</a>
+                <a class="active" href="PatientRecords.php">Records</a>
+                <a href="Inventory.php">Inventory</a>
+                <a href="ContactingHospital.php">About Us</a>
             </div>
         </div>
 

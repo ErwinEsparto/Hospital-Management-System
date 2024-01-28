@@ -145,14 +145,14 @@
                 <a href="#"> PUP Biñan Doctors </a>
             </div>
             <div class="nav">
-                <a class="active" href="http://localhost/Hospital-Management-System/html/Home.php">Home</a>
-                <a href="http://localhost/Hospital-Management-System/html/appointment.php">Appointments</a>
-                <a href="http://localhost/Hospital-Management-System/html/PatientRecords.php">Records</a>
-                <a href="http://localhost/Hospital-Management-System/html/Inventory.php">Inventory</a>
-                <a href="http://localhost/Hospital-Management-System/html/ContactingHospital.php">About Us</a>
+                <a class="active" href="Home.php">Home</a>
+                <a href="appointment.php">Appointments</a>
+                <a href="PatientRecords.php">Records</a>
+                <a href="Inventory.php">Inventory</a>
+                <a href="ContactingHospital.php">About Us</a>
             </div>
             <div class="account">
-                <a class="active" href="http://localhost/Hospital-Management-System/html/login.php">Login</a>
+                <a class="active" href="login.php">Login</a>
                 <!-- <a class="active" href="#">Profile</a> -->
             </div>
         </div>
