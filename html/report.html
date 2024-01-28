@@ -1,88 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Patient Report</title>
-<link rel="stylesheet" href="../css/report.css"> </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="report.css">
+    <title>Report</title>
+</head>
 
 <body>
-    <header>
-        <div class="container">
-
-            <div class="header">
-                <div class="logo">
-                    <h1>Hospital Management System</h1>
-                </div>
-                <div class="nav">
-                    <a href="Home.html">Home</a>
-                    <a href="#">Prescriptions</a>
-                    <a class="active" href="#">Records</a>
-                    <a href="#">Inventory</a>
-                </div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="#">Healthcare</a>
+            </div>
+        
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Prescriptions</a>
+                <a href="#">Appointments</a>
+                <a href="#">Records</a>
+                <a class="active" href="#">Report</a>
+                <a href="#">Inventory</a>
+                <a href="#">Contact</a>
             </div>
 
-        <h1>Patient Report</h1>
-        <p>Generated on: <span id="date"></span></p>
-    </header>
+            <div class="account">
+                <a class="active" href="#">Login</a>
+            </div>
+        </div>
 
-    <section id="patient-info">
-        <h2>Patient Information</h2>
-        <table>
-                <tr>
-                    <th> Patient Name: </th>
-                    <td> Niel Belen</td>
-                    </tr>
-                <tr>
-                    <th> age: </th>
-                    <td> 23 <td>
-                </tr>
-                    <th> Patient Name: </th>
-                    <td> Niel Belen</td>
-                </tr>
-                <tr>
-                    <th> Date of Birth : </th>
-                    <td> May 16, 2023</td>
-                </tr>
-                <tr>
-                    <th> Gender: </th>
-                    <td>Female</td>
-                </tr>
-                <tr>
-                    <th> Nationality: </th>
-                    <td>Filipino</td>
-                </tr>
-                <tr>
-                    <th> Religion : </th>
-                    <td>Catholic</td>
-                </tr>
-                <tr>
-                    <th> Address : </th>
-                    <td>Brgy. Platero Binan City Laguna</td>
-                </tr>
-                <tr>
-                    <th> Contact Number : </th>
-                    <td>099999999</td>
-                </tr>
-                <tr>
-                    <th> Email Address : </th>
-                    <td>niel@gmail.com</td>
-                </tr>
-    </table>
-</section>
+            <div class="main">
+                <header> Record</header>
+    
+                <form action="#">
+                    <div class="form-first">
+                        <div class="details personal">
+                            <span class="title"> Personal Details</span>
+                            
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>Full Name</label>
+                                    <span> Mekaila Mae Aguila</span>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Gender</label>
+                                    <select id="gender" name="gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Age</label>
+                                    <span>20</span>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label> Date of Birth</label>
+                                    <input type="date" placeholder="Enter birth date"required>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Marital </label>
+                                    <select id="marital" name="marital" required>
+                                        <option value="single">Single</option>
+                                        <option value="merried">Merried</option>
+                                        <option value="separated">Separated</option>
+                                        <option value="widowed">Widowed</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Nationality</label>
+                                    <span>Filipino</span>
+                                </div>
 
-    <section id="medical-history">
-        <h2>Medical History</h2>
-        </section>
+                                <div class="input-field">
+                                    <label>Occupation</label>
+                                    <span>housewife</span>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Email Address</label>
+                                    <span>mekailamaea@gmail.com</span>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Phone Number</label>
+                                    <span>0977-015-7114</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="vitals">
+                            <span class="title"> Vital Signs/ Measurements</span>
+                            
+                            <div class="fields">
+                                <div class="input-field">
+                                    <span> Temperature: 39.7°C</span>
+                                    <span> Heart Rate: 86 per minute </span>
+                                    <span> Blood Pressure: 120/80 mm Hg</span>
+                                    <span> Height: 170 cm</span>
+                                    <span> Weight: 60klg</span>
+                                    <span> BMI: 24.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="Health">
+                            <span class="title"> Health Issue/ Problem</span>
+                            
+                            <div class="fields">
+                                <div class="input-field">
+                                    <span> Headache</span>
+                                    <span> Flu</span>
+                                    <span> Breathing problem</span>
+                                    <span> Loss of Appetite</span>
+                                    <span> Confusion</span>
+                                    <span> Achy muscles</span>
+                                    <span> Rash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <p>© Healthcare Management System 2024</p>
+            </div>
 
-    <section id="diagnosis-treatment">
-        <h2>Diagnosis and Treatment</h2>
-        </section>
-
-    <script>
-        // JavaScript to dynamically add the date and time
-        const dateElement = document.getElementById("date");
-        dateElement.textContent = new Date().toLocaleString();
-    </script>
+            <script>
+                // Optional: You can include a print button to trigger the print dialog
+                document.write('<button onclick="window.print()">Print Report</button>');
+            </script>
 </body>
 </html>
+    
