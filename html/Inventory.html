@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Inventory.css"> 
-    <title>Your Web Page Title</title>
+    <link rel="stylesheet" href="Inventory.css">
+    <title>Inventory</title>
 </head>
-<body>
 
-    <div class="rectangle2"></div>
-    <div class="rectangle1"></div>
-    <div class="rectangle6"></div>
-    <div class="rectangle7"></div>
-    <div class="rectangle5"></div>
-    <div class="rectangle3"></div>
-    <div class="rectangle4"></div>
-    <div class="header"> </div>
-    <div class="footer">2024 Hospital Management System </div>
-    <div class="main">Inventory List </div>
-    <div class="content">
-    
-	<section id="inventory">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID NO.</th>
-                    <th>Medical Supplies</th>
-                    <th>Quantity</th>
-                   
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr>
-                    <td>1</td>
-                    <td>Medical Gloves</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Surgical Masks</td>
-                    <td>1000</td>
-                </tr>
-				<tr>
-				    <td>3</td>
-					<td>Syringe</td>
-					<td>2000</td>
-				</tr>
-				<tr>
-				    <td>4</td>
-					<td>Gauze</td>
-					<td>5000</td>
-				</tr>
-				<tr>
-				    <td>5</td>
-					<td>Nebulizer</td>
-					<td>500</td>
-				</tr>
-					
-            </tbody>
-        </table>
-    </section>
-	</div>
-    <div class="hospital">Hospital Name / Logo</div>
-    <div class="navbar"> <nav>
-        <ul>
-		
-            <li><a href="#">Home</a></li>
-			<li><a href="#">View Records</a></li>
-            <li><a href="#">Inventory</a></li>
-            <li><a href="#">Generating Reports</a></li>
-			<li><a href="#">Prescriptions</a></li>
-            
-        </ul>
-    </nav>
-	
-	</div>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="#">Healthcare</a>
+            </div>
+        
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Prescriptions</a>
+                <a href="#">Appointments</a>
+                <a href="#">Records</a>
+				 <a href="#">Report</a>
+                <a class="active" href="#">Inventory</a>            
+                <a href="#">Contact</a>
+            </div>
+			
+			 <div class="account">
+                <a class="active" href="#">Login</a>
+            </div>
+        </div>
+
+        <section id="inventory">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID NO.</th>
+                        <th>Medical Supplies</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Medical Gloves</td>
+                        <td>500</td>
+                        <td><a href='edit.php?id=1'>Edit</a> | <a href='delete.php?id=1'>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Surgical Masks</td>
+                        <td>1000</td>
+                        <td><a href='edit.php?id=2'>Edit</a> | <a href='delete.php?id=2'>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Syringe</td>
+                        <td>2000</td>
+                        <td><a href='edit.php?id=3'>Edit</a> | <a href='delete.php?id=3'>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gauze</td>
+                        <td>5000</td>
+                        <td><a href='edit.php?id=4'>Edit</a> | <a href='delete.php?id=4'>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Nebulizer</td>
+                        <td>500</td>
+                        <td><a href='edit.php?id=5'>Edit</a> | <a href='delete.php?id=5'>Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form action="add.php" method="post">
+                <label for="newMedicalSupplies">New Medical Supplies:</label>
+                <input type="text" name="newMedicalSupplies" required>
+                <label for="newQuantity">New Quantity:</label>
+                <input type="text" name="newQuantity" required>
+                <input type="submit" value="Add">
+            </form>
+        </section>
+    <div class="footer">
+                <p>© Healthcare Management System 2024</p>
+            </div>
 </body>
 </html>
