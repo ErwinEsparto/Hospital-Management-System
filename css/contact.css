@@ -8,15 +8,15 @@ body,html{
       font-family: Poppins, sans-serif;
       background-color: #00B6BC;
       padding: 0;
-	  margin: 0;
+    margin: 0;
     }
         .header {
             background-image: linear-gradient(to top, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.6));
             display: flex;
             justify-content: space-around;
-            padding: 40px;
+            padding: 40px 0;
             position: relative;
-            width: 98%;
+            width: 100%;
         }
         .logo a, .nav a, .account a {
             color: white;
@@ -24,7 +24,23 @@ body,html{
             padding: 20px;
             margin: 5px;
             border: solid 1px rgba(0, 0, 0, 0);
-		}
+        }
+        .nav a:hover {
+            border: solid 1px white;
+        }
+        .nav .active {
+            color: #A1DBF1;
+            pointer-events: none;
+        }
+        .account .active {
+            padding: 10px 30px 10px 30px;
+            background-color: #71D5E4;
+            color: black;
+            border-radius: 20px;
+        }
+        .account a:hover{
+            background-color: #00B6BC;
+        }
     .headmap {
         position: relative;
         text-align: center;
@@ -92,17 +108,17 @@ body,html{
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%,-50%);
       position: relative;
-	   display: center;
-	   color: black;
-	   font-size: 18px;
-	   font-variant: bold;
-	  
+     display: center;
+     color: black;
+     font-size: 18px;
+     font-variant: bold;
+    
     }
     .for-flex{
       display: center;
-	  color: black;
-	   font-size: 18px;
-	    font-variant: bold;
+    color: black;
+     font-size: 18px;
+      font-variant: bold;
     }
     .right img{
       width: 50px;
@@ -111,11 +127,11 @@ body,html{
     .white{
       height: 1000px;
       width: 100%;
-	  background-size: cover;
+    background-size: cover;
     background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	   background-image: url("https://www.slidebackground.com/uploads/hospital-background/hospital-background-subeta-29.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+     background-image: url("https://www.slidebackground.com/uploads/hospital-background/hospital-background-subeta-29.jpg");
     }
     .white .for-center{
       width: calc(100%/12*6);
@@ -160,19 +176,19 @@ body,html{
     }
     .white .for-center .text-box textarea{
       height: 200px;
-	  font-variant: bold;
+    font-variant: bold;
     }
     .last{
       left: 50.7%;
-	  font: Georgia, bold;
+    font: Georgia, bold;
     }
     .em{
       margin-top: 80px;
-	  font-variant: bold;
+    font-variant: bold;
     }
     .mess{
       margin-top: 153px;
-	font-variant: bold;
+  font-variant: bold;
     }
     .white .for-center .text-box button{
       padding: 20px;
@@ -181,14 +197,14 @@ body,html{
       border-radius: 10px;
       margin-top: 30px;
       margin-left: 80%;
-	  font-weight:600;
+    font-weight:600;
     }
-	.footer {
+  .footer {
             background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.2));
             display: flex;
-			 color: white;
+       color: white;
             justify-content: space-around;
-            padding: 20px;
+            padding: 20px 0;
             bottom: 0;
             position: relative;
             width: 100%;

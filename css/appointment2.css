@@ -1,0 +1,128 @@
+body {
+    font-family: 'Century Gothic';
+    margin: 0;
+    padding: 0; 
+}
+
+.header {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    position: fixed; 
+    width: 100%;
+    top: 0px;
+}
+
+.logo a, .nav a, .account a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px;
+    border: solid 1px rgba(0, 0, 0, 0);
+}
+.nav a:hover {
+    border: solid 1px white;
+}
+.nav .active {
+    color: #A1DBF1;
+    pointer-events: none;
+}
+.account .active {
+    padding: 10px 30px 10px 30px;
+    background-color: #71D5E4;
+    color: black;
+    border-radius: 20px;
+}
+.account a:hover{
+    background-color: #00B6BC;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 200px;
+}
+.title p {
+    color: #E4F4F3;
+    font-size: 110px;
+    font-family: 'Impact';
+    font-weight: bold;
+    margin: 0;
+}
+.description p {
+    color: white;
+    font-family: 'Arial';
+    font-size: 30px;
+    margin: 0;
+}
+.footer {
+    background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.8));
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+/*appointment section*/
+
+.appointment-section {
+    padding: 50px 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26adfc; 
+    margin: 40px 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.appointment-container {
+    background-color: white; 
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 500px; 
+    width: 60%; 
+    margin-bottom: 50px; 
+}
+
+.appointment-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.appointment-container label {
+    font-weight: bold;
+    
+}
+
+.appointment-container select,
+.appointment-container input[type="date"],
+.appointment-container input[type="time"],
+.appointment-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment-container button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.appointment-container button:hover {
+    background-color: #0056b3;
+    
+}

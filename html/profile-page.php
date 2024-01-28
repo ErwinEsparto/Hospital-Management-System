@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <h2>Consultation History</h2>
+        <h2>Prescription</h2>
         <div class="card">
             <div class="card-body">
                 <!-- content -->

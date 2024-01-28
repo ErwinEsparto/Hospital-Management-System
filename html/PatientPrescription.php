@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	 <div class="container">
+
+    <title>Prescription Generator</title>
+    <link rel="stylesheet" href="../css/prescription.css"> 
+</head>
+<body>
+    <div class="container">
         <div class="header">
             <div class="logo">
                 <a href="#"> PUP Biñan Doctors </a>
@@ -21,9 +26,8 @@
                 <a class="active" href="#">Login</a>
             </div>
         </div>
-    <title>Prescription Generator</title>
-    <link rel="stylesheet" href="prescription.css"> </head>
-<body>
+    </div>
+
     <div class="prescription-container">
         <h1 class="prescription-header">Prescription Form</h1>
         <div class="patient-info">

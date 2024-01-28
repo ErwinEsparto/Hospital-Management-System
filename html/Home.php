@@ -129,9 +129,10 @@
             background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.2));
             display: flex;
             justify-content: space-around;
-            padding: 20px;
+/*            padding: 20px;*/
             bottom: 0;
-            position: fixed;
+            margin-top: -53px;
+/*            position: rela;*/
             width: 100%;
         }
     </style>
@@ -141,29 +142,31 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <a href="#"> Healthcare </a>
+                <a href="#"> PUP Biñan Doctors </a>
             </div>
             <div class="nav">
-                <a class="active" href="#">Home</a>
-                <a href="#">Prescriptions</a>
-                <a href="#">Appointments</a>
-                <a href="PatientRecords.html">Records</a>
-                <a href="#">Inventory</a>
-                <a href="#">Contact</a>
+                <a class="active" href="http://localhost/Hospital-Management-System/html/Home.php">Home</a>
+                <a href="http://localhost/Hospital-Management-System/html/appointment.php">Appointments</a>
+                <a href="http://localhost/Hospital-Management-System/html/PatientRecords.php">Records</a>
+                <a href="http://localhost/Hospital-Management-System/html/Inventory.php">Inventory</a>
+                <a href="http://localhost/Hospital-Management-System/html/ContactingHospital.php">About Us</a>
             </div>
             <div class="account">
-                <a class="active" href="#">Login</a>
+                <a class="active" href="http://localhost/Hospital-Management-System/html/login.php">Login</a>
+                <!-- <a class="active" href="#">Profile</a> -->
             </div>
         </div>
         <div class="bod">
             <div class="main">
                 <div class="content">
                     <div class="title">
-                        <p>Healthcare Management System</p>
+                        <p>PUP Biñan Doctors</p>
                     </div>
                     <div class="description">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p> Your health is our priority, and we are here to serve you with the highest standards of medical care. 
+                            Explore our comprehensive range of medical specialties, advanced technologies, 
+                            and a team of skilled healthcare professionals committed to your health and recovery.
+                            Welcome to a healthier tomorrow at PUP Biñan Doctors.
                         </p>
                     </div>
                 </div>
@@ -207,7 +210,7 @@
 
 
         <div class="footer">
-            <p>© Healthcare Management System 2024</p>
+            <p>© PUP Biñan Doctor 2024</p>
         </div>
     </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Records</title>
+    <title>Appointment Records</title>
     <style>
         body {
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background.png");
@@ -30,14 +30,11 @@
             color: #A1DBF1;
             pointer-events: none;
         }
-        .patients {
+        .appointments {
             margin-top: 80px;
             width: 90%;
             height: 600px;
-        }
-        .category th{
-            background-color: rgb(161, 219, 241, .3); 
-            pointer-events: none;
+            box-shadow: 0px 0px 10px gray;
         }
         .activetab {
             background-color: rgb(113, 213, 228, .3); 
@@ -55,9 +52,6 @@
             padding: 20px;
             text-align: center;
         }
-        th {
-            background-color: #5C8D89;
-        }
         .choice:hover {
             background-color: #F4F9F4;
             cursor: pointer;
@@ -66,18 +60,30 @@
             background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.2));
             display: flex;
             justify-content: space-around;
+            padding: 20px;
             bottom: 0;
             width: 100%;
-            position: absolute;
+            position: fixed;
         }
     </style>
 </head>
 <body>
+    <?php
+        $DBHost = "localhost";
+        $DBUser = "root";
+        $DBPass = "";
+        $DBName = "healthcaredb";
+
+        $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+        $fetcbdata = "SELECT * FROM tbl_users";
+        $result = mysqli_query($conn, $fetcbdata);
+    ?>
+
     <div class="container">
 
         <div class="header">
             <div class="logo">
-                <a href="#"> Healthcare </a>
+                <a href="#"> PUP Biñan Doctors </a>
             </div>
             <div class="nav">
                 <a href="Home.html">Home</a>
@@ -92,53 +98,36 @@
         <div class="main">
             <div class="content">
                 <center>
-                <table class="patients">
+                <table class="appointments">
                     <tr class="tabs">
-                        <th class="activetab" colspan="2">Patients</th>
-                        <th class="inactivetab" colspan="2" onclick="window.location='Appointments.html';">Appointments</th>
+                        <th class="inactivetab" colspan="2" onclick="window.location='../html/PatientRecords.php';">Patients</th>
+                        <th class="activetab" colspan="2">Appointments</th>
                     </tr>
                     <tr>
-                        <td class="activetab" colspan="4">Choose a patient name for further information</td>
-                    </tr>
-                    <tr class="category">
                         <td>Patient Name</td>
-                        <td>Age</td>
-                        <td>Address</td>
+                        <td>Date</td>
                         <td>Contact Number</td>
+                        <td>Concern</td>
                     </tr>
-                    <tr class="choice">
-                        <td onclick="window.location='PatientInformation.html';">Name</td>
-                        <td onclick="window.location='PatientInformation.html';">Age</td>
-                        <td onclick="window.location='PatientInformation.html';">Address</td>
-                        <td onclick="window.location='PatientInformation.html';">Contact</td>
-                    </tr>
-                    <tr class="choice">
-                        <td onclick="window.location='PatientInformation.html';">Name</td>
-                        <td onclick="window.location='PatientInformation.html';">Age</td>
-                        <td onclick="window.location='PatientInformation.html';">Address</td>
-                        <td onclick="window.location='PatientInformation.html';">Contact</td>
-                    </tr>
-                    <tr class="choice">
-                        <td onclick="window.location='PatientInformation.html';">Name</td>
-                        <td onclick="window.location='PatientInformation.html';">Age</td>
-                        <td onclick="window.location='PatientInformation.html';">Address</td>
-                        <td onclick="window.location='PatientInformation.html';">Contact</td>
-                    </tr>
-                    <tr class="choice">
-                        <td onclick="window.location='PatientInformation.html';">Name</td>
-                        <td onclick="window.location='PatientInformation.html';">Age</td>
-                        <td onclick="window.location='PatientInformation.html';">Address</td>
-                        <td onclick="window.location='PatientInformation.html';">Contact</td>
-                    </tr>
+                    
+                    <?php foreach($result as $row): ?>
+                        <tr class="choice">
+                            <td><?= htmlspecialchars($row['fld_userName']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_gender']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_address']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_phone']) ?></td>
+                        </tr>
+                    <?php endforeach ?>
+
                 </table>
                 </center>
             </div>
         </div>
 
         <div class="footer">
-            <p>© Healthcare Management System 2024</p>
+            <p>© PUP Biñan Doctors 2024</p>
         </div>
-
+        
     </div>
 </body>
 </html>

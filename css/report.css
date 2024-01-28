@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("background.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background.png");
     font-family: 'Century Gothic';
     margin: 0;
     height: 100vh;
@@ -45,8 +45,8 @@ body{
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     max-width: 700px;
-    margin: 25%;
-    margin-top: -1%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .main header{

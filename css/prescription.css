@@ -17,8 +17,9 @@ body {
     width: 500px;
     background-color: #E4F4F3;
     border-radius: 20px;
-		margin-top: 80px;
-		margin-left: 400px;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
 	position: fixed;
 }
 
