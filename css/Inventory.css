@@ -48,7 +48,6 @@ body{
 }
 
 section {
-
     margin-top: 80px;
 }
 
@@ -75,6 +74,22 @@ th {
 .choice a:hover {
     color: white;
 }
-form label {
+form {
+    margin-top: 20px;
     color: white;
+}
+input[type=submit] {
+    padding: 2px 30px 2px 30px;
+    background-color: rgb(113, 213, 228, 1); 
+    color: black;
+    border-radius: 20px;
+    border: 0.5px solid lightslategray;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Century Gothic';
+    font-size: 15px;
+    transition: 1s;
+}
+input[type=submit]:hover {
+    background-color: #00B6BC;
 }
