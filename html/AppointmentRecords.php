@@ -75,7 +75,7 @@
         $DBName = "healthcaredb";
 
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
-        $fetcbdata = "SELECT * FROM tbl_users";
+        $fetcbdata = "SELECT * FROM tbl_appointment ORDER BY fld_appointmentDate ASC";
         $result = mysqli_query($conn, $fetcbdata);
     ?>
 
@@ -105,16 +105,16 @@
                     <tr>
                         <td>Patient Name</td>
                         <td>Date</td>
-                        <td>Contact Number</td>
-                        <td>Concern</td>
+                        <td>Time</td>
+                        <td>Doctor</td>
                     </tr>
                     
                     <?php foreach($result as $row): ?>
                         <tr class="choice">
-                            <td><?= htmlspecialchars($row['fld_userName']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_gender']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_address']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_phone']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_userID']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_appointmentDate']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_appointmentTime']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_doctorID']) ?></td>
                         </tr>
                     <?php endforeach ?>
 

@@ -160,7 +160,7 @@
             <div class="main">
                 <div class="content">
                     <div class="title">
-                        <p>PUP Biñan Doctors</p>
+                        <p>PUP Biñan Doctors</p><hr>
                     </div>
                     <div class="description">
                         <p> Your health is our priority, and we are here to serve you with the highest standards of medical care. 

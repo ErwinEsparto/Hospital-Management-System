@@ -37,10 +37,7 @@
             margin-top: 80px;
             width: 90%;
             height: 600px;
-        }
-        .category th{
-            background-color: rgb(161, 219, 241, .3); 
-            pointer-events: none;
+            box-shadow: 0px 0px 10px gray; - Patient Records
         }
         .activetab {
             background-color: rgb(113, 213, 228, .3); 
@@ -58,9 +55,6 @@
             padding: 20px;
             text-align: center;
         }
-        th {
-            background-color: #5C8D89;
-        }
         .choice:hover {
             background-color: #F4F9F4;
             cursor: pointer;
@@ -71,7 +65,7 @@
             justify-content: space-around;
             bottom: 0;
             width: 100%;
-            position: absolute;
+            position: fixed;
         }
     </style>
 </head>
