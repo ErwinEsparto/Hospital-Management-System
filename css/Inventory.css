@@ -28,7 +28,9 @@ body{
     padding: 20px;
     margin: 5px;
 }
-
+.nav a{
+    border: solid 1px rgba(1, 1, 1, 0);
+}
 .nav a:hover {
     border: solid 1px white;
 }

@@ -22,6 +22,9 @@
             padding: 20px;
             margin: 5px;
         }
+        .nav a{
+            border: solid 1px rgba(1, 1, 1, 0);
+        }
         .nav a:hover {
             color: white;
             border: solid 1px white;
@@ -52,6 +55,9 @@
             padding: 20px;
             text-align: center;
         }
+        td {
+            width: 25%;
+        }
         .choice:hover {
             background-color: #F4F9F4;
             cursor: pointer;
@@ -75,8 +81,18 @@
         $DBName = "healthcaredb";
 
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
-        $fetcbdata = "SELECT * FROM tbl_appointment ORDER BY fld_appointmentDate ASC";
-        $result = mysqli_query($conn, $fetcbdata);
+        $fetchuser = 
+        "SELECT tbl_users.fld_userName, tbl_appointment.fld_appointmentDate, tbl_appointment.fld_appointmentTime
+        FROM tbl_appointment 
+        INNER JOIN tbl_users ON tbl_appointment.fld_userID=tbl_users.fld_userID
+        ORDER BY fld_appointmentDate ASC";
+        $userresult = mysqli_query($conn, $fetchuser);
+
+        $fetchdoctor = 
+        "SELECT tbl_users.fld_userName FROM tbl_appointment
+        INNER JOIN tbl_users ON tbl_appointment.fld_doctorID=tbl_users.fld_userID
+        ORDER BY tbl_appointment.fld_appointmentDate ASC";
+        $doctorresult = mysqli_query($conn, $fetchdoctor);
     ?>
 
     <div class="container">
@@ -109,12 +125,15 @@
                         <td>Doctor</td>
                     </tr>
                     
-                    <?php foreach($result as $row): ?>
+                    <?php foreach($userresult as $row): ?>
                         <tr class="choice">
-                            <td><?= htmlspecialchars($row['fld_userID']) ?></td>
+                            <td><?= htmlspecialchars($row['fld_userName']) ?></td>
                             <td><?= htmlspecialchars($row['fld_appointmentDate']) ?></td>
                             <td><?= htmlspecialchars($row['fld_appointmentTime']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_doctorID']) ?></td>
+
+                            <?php $doctor = mysqli_fetch_assoc($doctorresult); ?>
+                            <td><?= htmlspecialchars($doctor['fld_userName']) ?></td>
+
                         </tr>
                     <?php endforeach ?>
 

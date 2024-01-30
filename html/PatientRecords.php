@@ -55,6 +55,12 @@
             padding: 20px;
             text-align: center;
         }
+        td {
+            width: 25%;
+        }
+        .address{
+            font-size: 0.9em;
+        }
         .choice:hover {
             background-color: #F4F9F4;
             cursor: pointer;
@@ -109,7 +115,7 @@
                     </tr>
                     <tr class="category">
                         <td>Patient Name</td>
-                        <td>Age</td>
+                        <td>Gender</td>
                         <td>Address</td>
                         <td>Contact Number</td>
                     </tr>
@@ -118,7 +124,7 @@
                         <tr class="choice">
                             <td><?= htmlspecialchars($row['fld_userName']) ?></td>
                             <td><?= htmlspecialchars($row['fld_gender']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_address']) ?></td>
+                            <td class="address"><?= htmlspecialchars($row['fld_address']) ?></td>
                             <td><?= htmlspecialchars($row['fld_phone']) ?></td>
                         </tr>
                     <?php endforeach ?>
