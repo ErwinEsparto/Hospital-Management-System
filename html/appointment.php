@@ -8,6 +8,16 @@
     
 </head>
 <body>
+    <?php
+        $DBHost = "localhost";
+        $DBUser = "root";
+        $DBPass = "";
+        $DBName = "healthcaredb";
+        $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+
+        $fetchDoctors = "SELECT * FROM tbl_users WHERE fld_groupId=1";
+        $doctors = mysqli_query($conn, $fetchDoctors);
+    ?>
 
     <div class="container">
         <div class="header">
@@ -33,14 +43,15 @@
     <div class="blurred-background"></div> 
     <div class="appointment-container">
         <h1>Book an Appointment</h1>
-        <form action="Home.php" method="post">
+        <form method="POST">
             <div>
                 <label for="doctor">Choose a Doctor:</label>
                 <select id="doctor" name="doctor">
-                    <option value="doctor1">Choose doctor</option>
-                    <option value="doctor2">Henry Sy</option>
-                    <option value="doctor3">Kuya Will</option>
-                    <option value="doctor4">Kuya J</option>
+                    <?php
+                        while ($row = $doctors->fetch_assoc()) {
+                            echo "<option value='".$row['fld_userID']."'>".$row['fld_userName']."</option>";
+                        }
+                    ?>
                 </select>
             </div>
             <div>
@@ -54,15 +65,17 @@
             <button type="submit">Save</button>
         </form>
         <?php
+            
+            if(isset($_POST["submit"])){
+                $doctor = $_POST["doctor"];
+                $date = $_POST["date"];
+                $time = $_POST["time"];
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            
-            $doctor = htmlspecialchars($_POST['doctor']);
-            $date = htmlspecialchars($_POST['date']);
-            $time = htmlspecialchars($_POST['time']);
-            
-            // echo "Appointment booked successfully for Dr. $doctor on $date at $time.";
-        }
+                $userId = $_POST["id"];
+                $appointmentQuery = "INSERT INTO tbl_appointment (fld_appointmentDate, fld_appointmentTime, fld_userID	, fld_doctorID) VALUES
+                ('$date', '$time', '$userId', '$doctor')";
+                $addAppointment = mysqli_query($conn, $appointmentQuery);
+            }
         ?>
     </div>
 </div>

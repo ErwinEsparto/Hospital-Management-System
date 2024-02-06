@@ -39,21 +39,21 @@
         </div>
       </div>
       <div class="form-outer">
-        <form action="#" class="reg-form">
+        <form method="POST" class="reg-form">
           <div class="page slide-page">
             <div class="title">Basic Info:</div>
             <div class="field">
               <label>Full Name</label>
               <!-- <div class="label">First Name</div> -->
-              <input required="" name="" type="text">
+              <input required name="fullName" type="text">
             </div>
             <div class="field">
               <label>Group</label>
               <!-- <div class="label">Last Name</div> -->
               <!-- <input required="" name="" type="text"> -->
-              <select>
-                <option>Health Care Professional</option>
-                <option>Patient</option>
+              <select name="userGroup">
+                <option value="1">Health Care Professional</option>
+                <option value="2">Patient</option>
               </select>
             </div>
             <div class="field btns">
@@ -66,12 +66,12 @@
             <div class="field">
               <label>Address</label>
               <!-- <div class="label">Email Address</div> -->
-              <input required="" name="" type="text">
+              <input required name="address" type="text">
             </div>
             <div class="field">
               <label>Phone Number</label>
               <!-- <div class="label">Phone Number</div> -->
-              <input required="" name="" type="Number">
+              <input required name="phone" type="Number">
             </div>
             <div class="field btns">
               <button class="prev-1 prev">Previous</button>
@@ -84,15 +84,15 @@
             <div class="field">
               <!-- <label>Date</label> -->
               <div class="label">Date</div>
-              <input required="" name="" type="date">
+              <input required name="birth" type="date">
             </div>
             <div class="field">
               <!-- <label>Gender</label> -->
               <div class="label">Gender</div>
-              <select>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
+              <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div class="field btns">
@@ -106,22 +106,44 @@
             <div class="field">
               <label>Email</label>
               <!-- <div class="label">Username</div> -->
-              <input required="" name="" type="text">
+              <input required name="email" type="text">
             </div>
             <div class="field">
               <label>Password</label>
               <!-- <div class="label">Password</div> -->
-              <input required="" name="" type="Password">
+              <input required name="password" type="Password">
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Previous</button>
 
-              <button class="submit">Submit</button>
+              <button type="submit" name="submit" class="submit">Submit</button>
             </div>
           </div>
         </form>
       </div>
     </div>
+    <?php
+        $DBHost = "localhost";
+        $DBUser = "root";
+        $DBPass = "";
+        $DBName = "healthcaredb";
+        $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+        
+        if(isset($_POST["submit"])){
+          $fullName = $_POST["fullName"];
+          $userGroup = $_POST["userGroup"];
+          $address = $_POST["address"];
+          $phone = $_POST["phone"];
+          $birth = $_POST["birth"];
+          $gender = $_POST["gender"];
+          $email = $_POST["email"];
+          $password = $_POST["password"];
+
+          $registerQuery = "INSERT INTO tbl_users (fld_userName, fld_address, fld_phone, fld_birth, fld_gender, fld_email, fld_pass, fld_groupID) VALUES
+          ('$fullName', '$address', '$phone', '$birth', '$gender', '$email', '$password', '$userGroup')";
+          $addUser = mysqli_query($conn, $registerQuery);
+        }
+    ?>
     <script src="../js/script.js"></script>
 
   </body>
