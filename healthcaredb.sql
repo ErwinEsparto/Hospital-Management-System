@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2024 at 09:31 AM
+-- Generation Time: Feb 06, 2024 at 09:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -86,24 +86,25 @@ CREATE TABLE `tbl_prescription` (
   `fld_prescriptionDate` date NOT NULL,
   `fld_prescriptionAmt` varchar(99) NOT NULL,
   `fld_frequency` varchar(99) NOT NULL,
-  `fld_userID` int(11) NOT NULL
+  `fld_userID` int(11) NOT NULL,
+  `fld_doctorID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_prescription`
 --
 
-INSERT INTO `tbl_prescription` (`fld_prescriptionID`, `fld_prescription`, `fld_prescriptionDate`, `fld_prescriptionAmt`, `fld_frequency`, `fld_userID`) VALUES
-(1, 'Acetaminophen', '2024-02-01', '500 mg', 'Twice daily', 1),
-(2, 'Amoxicillin', '2024-02-02', '250 mg', 'Three times daily', 1),
-(3, 'Lisinopril', '2024-02-03', '10 mg', 'Once daily', 2),
-(4, 'Atorvastatin', '2024-02-04', '20 mg', 'Nightly', 2),
-(5, 'Albuterol Inhaler', '2024-02-05', '2 puffs', 'As needed for shortness of breath', 3),
-(6, 'Omeprazole', '2024-02-06', '40 mg', 'Once daily before breakfast', 3),
-(7, 'Sertraline', '2024-02-07', '50 mg', 'Once daily', 4),
-(8, 'Naproxen', '2024-02-08', '220 mg', 'Twice daily with food', 4),
-(9, 'Metformin', '2024-02-09', '1000 mg', 'Twice daily with meals', 5),
-(10, 'Warfarin', '2024-02-10', '5 mg', 'Once daily in the evening', 5);
+INSERT INTO `tbl_prescription` (`fld_prescriptionID`, `fld_prescription`, `fld_prescriptionDate`, `fld_prescriptionAmt`, `fld_frequency`, `fld_userID`, `fld_doctorID`) VALUES
+(1, 'Acetaminophen', '2024-02-01', '500 mg', 'Twice daily', 6, 1),
+(2, 'Amoxicillin', '2024-02-02', '250 mg', 'Three times daily', 6, 1),
+(3, 'Lisinopril', '2024-02-03', '10 mg', 'Once daily', 7, 2),
+(4, 'Atorvastatin', '2024-02-04', '20 mg', 'Nightly', 7, 2),
+(5, 'Albuterol Inhaler', '2024-02-05', '2 puffs', 'As needed for shortness of breath', 8, 3),
+(6, 'Omeprazole', '2024-02-06', '40 mg', 'Once daily before breakfast', 8, 3),
+(7, 'Sertraline', '2024-02-07', '50 mg', 'Once daily', 9, 4),
+(8, 'Naproxen', '2024-02-08', '220 mg', 'Twice daily with food', 9, 4),
+(9, 'Metformin', '2024-02-09', '1000 mg', 'Twice daily with meals', 10, 5),
+(10, 'Warfarin', '2024-02-10', '5 mg', 'Once daily in the evening', 10, 5);
 
 -- --------------------------------------------------------
 
@@ -178,7 +179,9 @@ ALTER TABLE `tbl_inventory`
 -- Indexes for table `tbl_prescription`
 --
 ALTER TABLE `tbl_prescription`
-  ADD PRIMARY KEY (`fld_prescriptionID`);
+  ADD PRIMARY KEY (`fld_prescriptionID`),
+  ADD KEY `fk_patient` (`fld_userID`),
+  ADD KEY `fk_doctor` (`fld_doctorID`);
 
 --
 -- Indexes for table `tbl_usergroup`
@@ -225,6 +228,17 @@ ALTER TABLE `tbl_usergroup`
 --
 ALTER TABLE `tbl_users`
   MODIFY `fld_userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_prescription`
+--
+ALTER TABLE `tbl_prescription`
+  ADD CONSTRAINT `fk_doctor` FOREIGN KEY (`fld_doctorID`) REFERENCES `tbl_users` (`fld_userID`),
+  ADD CONSTRAINT `fk_patient` FOREIGN KEY (`fld_userID`) REFERENCES `tbl_users` (`fld_userID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
