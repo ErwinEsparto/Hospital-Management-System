@@ -29,6 +29,10 @@ body {
     color: #A1DBF1;
     pointer-events: none;
 }
+.account a{
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+}
 .account .active {
     padding: 10px 30px 10px 30px;
     background-color: #71D5E4;
@@ -127,4 +131,7 @@ body {
 .appointment-container button:hover {
     background-color: #0056b3;
     
+}
+.appointment-container form p#result {
+    text-align: center;
 }
