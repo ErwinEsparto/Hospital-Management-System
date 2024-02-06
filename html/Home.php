@@ -4,142 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        body {
-            font-family: 'Century Gothic';
-            margin: 0;
-        }
-        .bod{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background.png");
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
-        .header {
-            background-image: linear-gradient(to top, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.6));
-            display: flex;
-            justify-content: space-around;
-            padding: 40px;
-            position: fixed;
-            width: 100%;
-        }
-        .logo a, .nav a, .account a {
-            color: white;
-            text-decoration: none;
-            padding: 20px;
-            margin: 5px;
-            border: solid 1px rgba(0, 0, 0, 0);
-        }
-        .nav a:hover {
-            border: solid 1px white;
-        }
-        .nav .active {
-            color: #A1DBF1;
-            pointer-events: none;
-        }
-        .account .active {
-            padding: 10px 30px 10px 30px;
-            background-color: #71D5E4;
-            color: black;
-            border-radius: 20px;
-        }
-        .account a{
-            padding: 10px 30px 10px 30px;
-            border-radius: 20px;
-        }
-        .account a:hover{
-            background-color: #00B6BC;
-        }
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 200px;
-        }
-        .title p {
-            color: #E4F4F3;
-            font-size: 110px;
-            font-family: 'Impact';
-            font-weight: bold;
-            margin: 0;
-        }
-        .description p {
-            color: white;
-            font-family: 'Arial';
-            font-size: 30px;
-            margin: 0;
-        }
-        .second-bod{
-            background-color: #e4f4f3;
-            width: 100%;
-            height: auto;
-        }
-        .second-content{
-            width: calc(100%/12*8);
-            border: 1px solid rgba(0, 0, 0, 0);
-/*            height: 100vh;*/
-            margin: auto;
-            padding-bottom: 100px;
-        }
-        .second-content a{
-            text-decoration: none;
-        }
-        .second-content .info{
-            display: flex;
-            width: 100%;
-/*            border: 1px solid black;*/
-            height: 300px;
-            margin-top: 50px;
-        }
-        .second-content .info img{
-            border-radius: 5px;
-        }
-        .second-content .info .text{
-            width: calc(100%/12*6);
-/*            border: 1px solid black;*/
-            height: auto;
-            margin: auto;
-        }
-        .second-content .info .right{
-            text-align: right;
-        }
-        .second-content .cent{
-            text-align: center;
-        }
-
-        .second-content .text .ttl{
-            font-weight: bold;
-            font-size: 35px;
-            color: black;
-        }
-        .second-content .text .desc{
-            color: grey;
-            font-size: 20px;
-        }
-        .second-content .vid{
-/*            border: 1px solid black;*/
-            margin-top: 50px;
-            align-items: center;
-
-        }
-        .vid iframe{
-            left: 50%;
-            transform: translate(-50%);
-            position: relative;
-        }
-        .footer {
-            background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.2));
-            display: flex;
-            justify-content: space-around;
-/*            padding: 20px;*/
-            bottom: 0;
-            margin-top: -53px;
-/*            position: rela;*/
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
 </head>
 <body>
     <?php
@@ -248,16 +113,54 @@
                     <img src="https://www.icn.ch/sites/default/files/styles/icn_cover_half_width_md/public/2023-06/thumbnail_for%20website_WHO75.jpeg?h=bc8a8ef5&itok=v2tcIZSb">
 
                 </div></a>
-                
-                <div class="vid">
-                    <iframe width="420" height="345" src="https://www.youtube-nocookie.com/embed/Misq7MUutho?si=J1QKpgefqh3y19Ff" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <div class="text cent">
-                        <p class="ttl">What is safe food?</p>
-                        <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p>
-                        
+
+                <div class="video-container">
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube-nocookie.com/embed/Misq7MUutho?si=J1QKpgefqh3y19Ff" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">What is safe food?</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
                     </div>
-                    
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube.com/embed/y9qpTp8yyi4?si=90quVlfyaqRHxGwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">COVID-19 Vaccine</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube.com/embed/Fe4C9ViYIvo?si=9_SbDNKdreuZvHrS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">World Hand Hygiene</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube.com/embed/nHIy04e7Y50?si=UCgz0wNnClkNh_ne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">Reproductive health</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube.com/embed/kOISEM6L4xk?si=cxM2wHcIapzb8C9F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">Blood Donation</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <iframe width="420" height="345" src="https://www.youtube.com/embed/SI3JtJTlDyY?si=j2ZFp_qkszI_ZLKX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="text cent">
+                            <p class="ttl">Maternal Health</p>
+                            <!-- <p class="desc">This animated film was developed by WHO to explain what is safe food and to share everyday food safety tips to follow at home.<br>More information here: <a href="https://www.who.int/news-room/fact-sheets/detail/food-safety">https://www.who.int/news-room/fact-sheets/detail/food-safety</a></p> -->
+                        </div>
+                    </div>
+
                 </div>
+                
+                
                 
             </div>
             

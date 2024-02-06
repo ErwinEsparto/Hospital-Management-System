@@ -150,7 +150,9 @@ body {
 }
 .prescriptions th, .prescriptions td {
     background-color: rgb(228, 244, 243);
-    border: 1px solid black;
+/*    border: 1px solid black;*/
+    border-left: 3px solid rgb(113, 213, 228);
+    border-right: 3px solid rgb(113, 213, 228);
     padding: 10px;
     text-align: center;
 }
@@ -175,4 +177,8 @@ body {
     &:hover {
         background-color: #00B6BC;
     }
+}
+.card-body .presc{
+    border: none;
+    border-radius: 10px;
 }

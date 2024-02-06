@@ -49,7 +49,7 @@
     <!-- Sidenav -->
     <div class="sidenav">
         <div class="profile">
-            <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.6435-9/84119388_1211680262354975_8124552135036633088_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeEz0iRwM6nhXTNOCJe2QvFQZpdVV9GbAHNml1VX0ZsAcxnEaTKn_omXysxOheeUZ-xMgpW2YDsd8w3TtqcV2pH3&_nc_ohc=vDZzPSHOLzYAX9HUW_r&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfCvtoM9tIwG3d2kRD-j9lGm3CXTkghoGVjyD266OgG4vQ&oe=65ACBE49" alt="" width="100" height="100">
+            <img src="../images/profile.png" alt="" width="100" height="100">
 
             <div class="name">
                 <?php echo $account['fld_userName']; ?>
@@ -87,7 +87,7 @@
         <h2>Personal Info</h2>
         <div class="card">
             <div class="card-body">
-                <table>
+                <table class="presc">
                     <tbody>
                         <tr>
                             <td>Name</td>
