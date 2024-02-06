@@ -165,3 +165,14 @@ body {
 .prescriptions .choice a:hover {
     color: white;
 }
+.card-body a {
+    padding: 10px 30px 10px 30px;
+    background-color: #71D5E4;
+    color: black;
+    border-radius: 20px;
+    transition: 0.7s;
+    text-decoration: none;
+    &:hover {
+        background-color: #00B6BC;
+    }
+}

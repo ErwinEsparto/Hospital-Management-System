@@ -128,33 +128,40 @@
         <div class="secondCard">
             <div class="card-body">
                 <center>
-                <table class="prescriptions">
-                    <thead>
-                        <tr class="category">
-                            <th>Doctor</th>
-                            <th>Prescription</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
+                <?php
+                    if($account['fld_groupID']==2){
                         $rownum = mysqli_num_rows($prescriptionResult);
 
                         if($rownum>0){
+                                echo '
+                                <table class="prescriptions">
+                                    <thead>
+                                        <tr class="category">
+                                            <th>Doctor</th>
+                                            <th>Prescription</th>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Frequency</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>';
                             while ($prescription = mysqli_fetch_assoc($prescriptionResult)){
                                 echo "
-                                <tr>
-                                    <td>".$prescription['doctorName']."</td>
-                                    <td>".$prescription['fld_prescription']."</td>
-                                    <td>".$prescription['fld_prescriptionDate']."</td>
-                                    <td>".$prescription['fld_prescriptionAmt']."</td>
-                                    <td>".$prescription['fld_frequency']."</td>
-                                </tr>";
+                                    <tr>
+                                        <td>".$prescription['doctorName']."</td>
+                                        <td>".$prescription['fld_prescription']."</td>
+                                        <td>".$prescription['fld_prescriptionDate']."</td>
+                                        <td>".$prescription['fld_prescriptionAmt']."</td>
+                                        <td>".$prescription['fld_frequency']."</td>
+                                    </tr>";
                             }
                         }
-                        ?>
+                    }
+                    else {
+                        echo '<a href="PatientPrescription.php"> Provide Prescriptions to Patients </a>';
+                    }
+                    
+                    ?>
                     </tbody>
                 </table>
                 </center>
