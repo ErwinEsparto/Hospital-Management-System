@@ -148,8 +148,9 @@
             <div class="account">
                 <?php
                     if ($loggedIn==true){
+                        $userId = $_SESSION['userid'];
                         echo '
-                            <a class="active" href="#">Profile</a>
+                            <a class="active" href="profile-page.php?fld_userID='.$userId.'">Profile</a>
                             <a href="logout.php">Logout</a>
                         ';
                     }
@@ -177,15 +178,21 @@
                         <td>Address</td>
                         <td>Contact Number</td>
                     </tr>
+                    <?php
+                    $rownum = mysqli_num_rows($result);
 
-                    <?php foreach($result as $row): ?>
-                        <tr class="choice">
-                            <td><?= htmlspecialchars($row['fld_userName']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_gender']) ?></td>
-                            <td class="address"><?= htmlspecialchars($row['fld_address']) ?></td>
-                            <td><?= htmlspecialchars($row['fld_phone']) ?></td>
-                        </tr>
-                    <?php endforeach ?>
+                    if($rownum>0){
+                        while ($patients = mysqli_fetch_assoc($result)){
+                            echo "
+                                <tr class='choice' onclick=\"window.location.href='profile-page.php?fld_userID=".$patients['fld_userID']."'\">
+                                <td>".$patients['fld_userName']."</td>
+                                <td>".$patients['fld_gender']."</td>
+                                <td class='address'>".$patients['fld_address']."</td>
+                                <td>".$patients['fld_phone']."</td>
+                            </tr>";
+                        }
+                    }
+                    ?>
 
                 </table>
                 </center>

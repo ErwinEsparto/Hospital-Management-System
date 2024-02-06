@@ -85,8 +85,9 @@
 			 <div class="account">
                 <?php
                     if ($loggedIn==true){
+                        $userId = $_SESSION['userid'];
                         echo '
-                            <a class="active" href="#">Profile</a>
+                            <a class="active" href="profile-page.php?fld_userID='.$userId.'">Profile</a>
                             <a href="logout.php">Logout</a>
                         ';
                     }

@@ -62,10 +62,11 @@
             <div class="account">
                 <?php
                     if ($loggedIn==true){
-                        echo '
-                            <a class="active" href="#">Profile</a>
-                            <a href="logout.php">Logout</a>
-                        ';
+                      $userId = $_SESSION['userid'];
+                      echo '
+                          <a class="active" href="profile-page.php?fld_userID='.$userId.'">Profile</a>
+                          <a href="logout.php">Logout</a>
+                      ';
                     }
                     else {
                         echo '<a class="active" href="login.php">Login</a>';

@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="../css/profile-style.css">
 </head>
 <body>
+    <?php
+        session_start();
+        $DBHost = "localhost";
+        $DBUser = "root";
+        $DBPass = "";
+        $DBName = "healthcaredb";
+        $loggedIn = $_SESSION['loggedIn'] ?? false;
+
+        $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+        $fetcbdata = "SELECT * FROM tbl_users WHERE fld_userID='".$_GET['fld_userID']."'";
+        $result = mysqli_query($conn, $fetcbdata);
+        $patient = mysqli_fetch_assoc($result);
+    ?>
+
     <!-- Navbar top -->
     <div class="navbar-top">
         <div class="title">
@@ -22,10 +36,17 @@
             <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.6435-9/84119388_1211680262354975_8124552135036633088_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeEz0iRwM6nhXTNOCJe2QvFQZpdVV9GbAHNml1VX0ZsAcxnEaTKn_omXysxOheeUZ-xMgpW2YDsd8w3TtqcV2pH3&_nc_ohc=vDZzPSHOLzYAX9HUW_r&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfCvtoM9tIwG3d2kRD-j9lGm3CXTkghoGVjyD266OgG4vQ&oe=65ACBE49" alt="" width="100" height="100">
 
             <div class="name">
-                Jemuel Cebuano
+                <?php echo $patient['fld_userName']; ?>
             </div>
             <div class="job">
-                Health Care Professional
+                <?php 
+                    if($patient['fld_groupID']==1){
+                        echo "Healthcare Professional"; 
+                    }
+                    else {
+                        echo "Patient"; 
+                    }
+                ?>
             </div>
         </div>
 
@@ -51,32 +72,32 @@
                         <tr>
                             <td>Name</td>
                             <td>:</td>
-                            <td>Jemuel Cebuano</td>
+                            <td><?php echo $patient['fld_userName']; ?></td>
                         </tr>
                         <tr>
                             <td>Email</td>
                             <td>:</td>
-                            <td>cebuano.jemuel@gmail.com</td>
+                            <td><?php echo $patient['fld_email']; ?></td>
                         </tr>
                         <tr>
                             <td>Address</td>
                             <td>:</td>
-                            <td>Olivarez Homes South, Sto. Tomas Binan, Laguna</td>
+                            <td><?php echo $patient['fld_address']; ?></td>
                         </tr>
                         <tr>
                             <td>Phone</td>
                             <td>:</td>
-                            <td>09217299080</td>
+                            <td><?php echo $patient['fld_phone']; ?></td>
                         </tr>
                         <tr>
                             <td>Birth Date</td>
                             <td>:</td>
-                            <td>June 9, 2002</td>
+                            <td><?php echo $patient['fld_birth']; ?></td>
                         </tr>
                         <tr>
                             <td>Gender</td>
                             <td>:</td>
-                            <td>Male</td>
+                            <td><?php echo $patient['fld_gender']; ?></td>
                         </tr>
                     </tbody>
                 </table>
