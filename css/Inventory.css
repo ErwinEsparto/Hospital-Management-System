@@ -1,203 +1,101 @@
-/* Rectangle 2 */
-.rectangle2 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 1910px;
-    height: 1070px;
-    left: 5px;
-    top: 5px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background.png");
+    font-family: 'Century Gothic';
+    margin: 0;
 }
 
-/* Rectangle 1 */
-.rectangle1 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 1892px;
-    height: 155px;
-    left: 14px;
-    top: 14px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-}
-
-/* Rectangle 6 */
-.rectangle6 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 1892px;
-    height: 724px;
-    left: 14px;
-    top: 178px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-}
-
-/* Rectangle 7 */
-.rectangle7 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 1872px;
-    height: 629px;
-    left: 24px;
-    top: 260px;
-    background: #A1DBF1;
-    border: 2px solid #000000;
-}
-
-/* Rectangle 5 */
-.rectangle5 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 1892px;
-    height: 155px;
-    left: 14px;
-    top: 911px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-}
-
-/* Rectangle 3 */
-.rectangle3 {
-    position: absolute;
-    width: 549px;
-    height: 121px;
-    left: 24px;
-    top: 31px;
-    background: #A1DBF1;
-}
-
-/* Rectangle 4 */
-.rectangle4 {
-    position: absolute;
-    width: 873px;
-    height: 121px;
-    left: 1023px;
-    top: 31px;
-    background: #A1DBF1;
-}
-
-/* Header */
 .header {
-    position: absolute;
-    width: 122px;
-    height: 42px;
-    left: 737px;
-    top: 70px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
-    color: #A1DBF1;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
 }
 
-/* Footer */
+
 .footer {
-    position: absolute;
-    width: 900px;
-    height: 42px;
-    left: 756px;
-    top: 968px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 42px;
-    color: #A1DBF1;
+    background-image: linear-gradient(to bottom, rgba(0, 0,0 ,0), rgba(0, 0, 0, 0.2));
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
-/* Main */
-.main {
-    position: absolute;
-    width: 280px;
-    height: 42px;
-    left: 920px;
-    top: 193px;
-	
-	align-self: center;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 42px;
-    color: #A1DBF1;
-}
-
-/* Content */
-.content {
-    position: relative;
-	margin-top: 280px;
-    width: 1900px;
-    height: 42px;
-	align-self: center;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
-    color: #FFFFFF;
-}
-
-/* Hospital Name / Logo */
-.hospital {
-    position: absolute;
-    width: 409px;
-    height: 48px;
-    left: 97px;
-    top: 67px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FFFFFF;
-}
-
-/* Navigation Bar */
-.navbar ul li {
-    position: relative;
-   
-  
-    left: 990px;
-    top: -270px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-	list-style: none;
-    line-height: 48px;
-    color: #FFFFFF;
-	letter-spacing: 3px;
-	cursor: pointer;
-	 display: inline;
-    margin-top: 5px;
-
-}
-
-nav a {
+.logo a, .nav a, .account a{
+    color: white;
     text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
+    padding: 20px;
+    margin: 5px;
 }
-	
+.nav a{
+    border: solid 1px rgba(1, 1, 1, 0);
+}
+.nav a:hover {
+    border: solid 1px white;
+}
+.nav .active {
+    color: #A1DBF1;
+    pointer-events: none;
+}
+.account a{
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+}
+.account .active {
+    padding: 10px 30px 10px 30px;
+    background-color: #71D5E4;
+    color: black;
+    border-radius: 20px;
+}
+
+.account a:hover{
+    background-color: #00B6BC;
+}
+
 section {
-    margin: 20px;
+    margin-top: 80px;
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
+    box-shadow: 0px 0px 10px gray;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    background-color: rgb(228, 244, 243, .5);
+    padding: 10px;
+    text-align: center;
 }
 
 th {
-    background-color: #333;
+    background-color: rgb(113, 213, 228, .3); 
     color: white;
+}
+.choice a {
+    text-decoration: none;
+    color: black;
+}
+.choice a:hover {
+    color: white;
+}
+form {
+    margin-top: 20px;
+    color: white;
+}
+input[type=submit] {
+    padding: 2px 30px 2px 30px;
+    background-color: rgb(113, 213, 228, 1); 
+    color: black;
+    border-radius: 20px;
+    border: 0.5px solid lightslategray;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Century Gothic';
+    font-size: 15px;
+    transition: 1s;
+}
+input[type=submit]:hover {
+    background-color: #00B6BC;
 }

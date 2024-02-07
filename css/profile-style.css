@@ -136,3 +136,49 @@ body {
     height: 270px;
     width: 80%;
 }
+.secondCard {
+    background-color: #e4f4f3;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.prescriptions {
+    width: 100%;
+    border-collapse: collapse;
+}
+.prescriptions th, .prescriptions td {
+    background-color: rgb(228, 244, 243);
+/*    border: 1px solid black;*/
+    border-left: 3px solid rgb(113, 213, 228);
+    border-right: 3px solid rgb(113, 213, 228);
+    padding: 10px;
+    text-align: center;
+}
+.prescriptions th {
+    background-color: rgb(113, 213, 228); 
+    color: white;
+}
+.prescriptions .choice a {
+    text-decoration: none;
+    color: black;
+}
+.prescriptions .choice a:hover {
+    color: white;
+}
+.card-body a {
+    padding: 10px 30px 10px 30px;
+    background-color: #71D5E4;
+    color: black;
+    border-radius: 20px;
+    transition: 0.7s;
+    text-decoration: none;
+    &:hover {
+        background-color: #00B6BC;
+    }
+}
+.card-body .presc{
+    border: none;
+    border-radius: 10px;
+}
